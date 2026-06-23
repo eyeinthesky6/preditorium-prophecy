@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://preditorium.com/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://preditorium.com/images/cover_front.jpg</image:loc>
+      <image:title>The Preditorium Prophecy: The Golden Statue book cover</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://preditorium.com/images/author.jpg</image:loc>
+      <image:title>Praanav J Thaakur author photo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://preditorium.com/sample-chapter.pdf</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
