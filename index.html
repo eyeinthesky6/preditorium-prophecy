@@ -81,7 +81,14 @@
         "name": "Praanav J Thaakur",
         "url": "https://preditorium.com/#author",
         "description": "Praanav J Thaakur is a 13-year-old Indian author and the writer of The Preditorium Prophecy: The Golden Statue.",
-        "image": "https://preditorium.com/images/author.jpg"
+        "image": "https://preditorium.com/images/author.jpg",
+        "sameAs": [
+          "https://app.thestorygraph.com/profile/praanavjthaakur",
+          "https://www.goodreads.com/author/show/70833954.Praanav_J_Thaakur",
+          "https://www.instagram.com/preditoriumprophecy",
+          "https://www.facebook.com/profile.php?id=61590901433842",
+          "https://www.youtube.com/@preditoriumprophecy"
+        ]
       },
       {
         "@type": "Organization",
@@ -112,7 +119,7 @@
         ],
         "audience": {
           "@type": "Audience",
-          "audienceType": "Readers aged 13 to 18"
+          "audienceType": "Readers aged 8 and up"
         },
         "numberOfPages": 183,
         "datePublished": "2026-06-05",
@@ -143,6 +150,7 @@
         "sameAs": [
           "https://www.amazon.in/dp/B0H461JZXX",
           "https://notionpress.com/read/the-preditorium-prophecy",
+          "https://app.thestorygraph.com/books/4ebbda44-c89d-40da-9382-aba5ee23c2f3",
           "https://www.instagram.com/preditoriumprophecy",
           "https://www.facebook.com/profile.php?id=61590901433842",
           "https://www.youtube.com/@preditoriumprophecy"
@@ -385,6 +393,19 @@
       .review-card { padding: 22px 20px; border-radius: 12px; }
     }
 
+    /* ---------- PUBLIC PROFILES ---------- */
+    .profiles { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .profile-grid { margin-top: 34px; }
+    .profile-card .store-meta { min-height: 42px; }
+    .profile-status { display: inline-flex; width: fit-content; align-items: center; color: var(--ink);
+      background: rgba(255, 200, 87, 0.2); border: 1px solid rgba(184, 134, 36, 0.35);
+      border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 700; }
+    .profile-note { color: var(--muted); font-size: 14px; max-width: 720px; margin: 18px auto 0; text-align: center; }
+    @media (max-width: 520px) {
+      .profile-grid { margin-top: 28px; }
+      .profile-card .store-meta { min-height: 0; }
+    }
+
     /* ---------- BUY / STORES ---------- */
     .buy { text-align: center; }
     .region { margin-top: 44px; text-align: left; }
@@ -463,6 +484,7 @@
         <a href="#sample">Read a Sample</a>
         <a href="#author">The Author</a>
         <a href="#reviews">Reviews</a>
+        <a href="#profiles">Profiles</a>
         <a href="#school">Schools</a>
         <a href="#contact">Contact</a>
         <a class="nav-cta" href="#buy">Buy Now</a>
@@ -503,7 +525,7 @@
           <p class="lead">Peter and his friends are the Ascendants — a team of kids with unusual powers, big problems, and one very unlucky monster magnet named Cody. Together they must follow the clues beneath the Preditorium, face dangerous guardians, survive magical traps, uncover the secrets of Atlantis, and search for the legendary Golden Statue.</p>
           <div class="facts">
             <div class="fact"><strong>Author</strong><span>Praanav J Thaakur</span></div>
-            <div class="fact"><strong>Reading Age</strong><span>13 – 18 years</span></div>
+            <div class="fact"><strong>Reading Age</strong><span>8+ years</span></div>
             <div class="fact"><strong>Length</strong><span>21 chapters · 183 pages</span></div>
             <div class="fact"><strong>Genre</strong><span>Fantasy adventure</span></div>
             <div class="fact"><strong>Publisher</strong><span>Notion Press · 2026</span></div>
@@ -566,6 +588,90 @@
             <div class="by">— Komal Puri, verified purchase</div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- PUBLIC PROFILES -->
+    <section id="profiles" class="profiles">
+      <div class="wrap">
+        <p class="section-eyebrow">Official Links</p>
+        <h2>Find the book across reader platforms</h2>
+        <p class="lead" style="max-width:680px;margin:0 auto;">These are the public places where the book, author profile, store listing, or official channel is already present.</p>
+        <div class="store-grid profile-grid">
+          <div class="store-card profile-card reveal">
+            <span class="profile-status">Profile live</span>
+            <span class="store-name">StoryGraph Author</span>
+            <span class="store-meta">Praanav's public reader profile with the official website linked.</span>
+            <div class="store-actions">
+              <a class="store-primary" href="https://app.thestorygraph.com/profile/praanavjthaakur" target="_blank" rel="noopener">View profile</a>
+            </div>
+          </div>
+          <div class="store-card profile-card reveal">
+            <span class="profile-status">Book record live</span>
+            <span class="store-name">StoryGraph Book</span>
+            <span class="store-meta">Book page with cover, genre, ISBN, publisher, and page count.</span>
+            <div class="store-actions">
+              <a class="store-primary" href="https://app.thestorygraph.com/books/4ebbda44-c89d-40da-9382-aba5ee23c2f3" target="_blank" rel="noopener">View book</a>
+            </div>
+          </div>
+          <div class="store-card profile-card reveal">
+            <span class="profile-status">Page live</span>
+            <span class="store-name">Goodreads Author</span>
+            <span class="store-meta">Reader page for Goodreads discovery and future reviews.</span>
+            <div class="store-actions">
+              <a class="store-primary" href="https://www.goodreads.com/author/show/70833954.Praanav_J_Thaakur" target="_blank" rel="noopener">View profile</a>
+            </div>
+          </div>
+          <div class="store-card profile-card reveal">
+            <span class="profile-status">Store live</span>
+            <span class="store-name">Amazon India</span>
+            <span class="store-meta">Official Amazon listing for the paperback and hardcover editions.</span>
+            <div class="store-actions">
+              <a class="store-primary" href="https://www.amazon.in/dp/B0H461JZXX" target="_blank" rel="noopener">View listing</a>
+            </div>
+          </div>
+          <div class="store-card profile-card reveal">
+            <span class="profile-status">Store live</span>
+            <span class="store-name">Flipkart</span>
+            <span class="store-meta">India retail listing for readers who prefer Flipkart.</span>
+            <div class="store-actions">
+              <a class="store-primary" href="https://www.flipkart.com/the-preditorium-prophecy/p/itm42821d353088b" target="_blank" rel="noopener">View listing</a>
+            </div>
+          </div>
+          <div class="store-card profile-card reveal">
+            <span class="profile-status">Publisher store</span>
+            <span class="store-name">Notion Press</span>
+            <span class="store-meta">The publisher's direct book page for The Preditorium Prophecy.</span>
+            <div class="store-actions">
+              <a class="store-primary" href="https://notionpress.com/read/the-preditorium-prophecy" target="_blank" rel="noopener">View page</a>
+            </div>
+          </div>
+          <div class="store-card profile-card reveal">
+            <span class="profile-status">Social live</span>
+            <span class="store-name">Instagram</span>
+            <span class="store-meta">Launch visuals, short updates, and book-world creative posts.</span>
+            <div class="store-actions">
+              <a class="store-primary" href="https://www.instagram.com/preditoriumprophecy" target="_blank" rel="noopener">View channel</a>
+            </div>
+          </div>
+          <div class="store-card profile-card reveal">
+            <span class="profile-status">Social live</span>
+            <span class="store-name">Facebook</span>
+            <span class="store-meta">Updates for family, readers, schools, and community sharing.</span>
+            <div class="store-actions">
+              <a class="store-primary" href="https://www.facebook.com/profile.php?id=61590901433842" target="_blank" rel="noopener">View page</a>
+            </div>
+          </div>
+          <div class="store-card profile-card reveal">
+            <span class="profile-status">Channel live</span>
+            <span class="store-name">YouTube</span>
+            <span class="store-meta">Shorts, teaser videos, and future launch clips.</span>
+            <div class="store-actions">
+              <a class="store-primary" href="https://www.youtube.com/@preditoriumprophecy" target="_blank" rel="noopener">View channel</a>
+            </div>
+          </div>
+        </div>
+        <p class="profile-note">More reader platforms will be added here as they go live.</p>
       </div>
     </section>
 
