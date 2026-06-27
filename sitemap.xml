@@ -3,7 +3,7 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://preditorium.com/</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -15,10 +15,9 @@
       <image:title>Praanav J Thaakur author photo</image:title>
     </image:image>
   </url>
-  <url>
-    <loc>https://preditorium.com/sample-chapter.pdf</loc>
-    <lastmod>2026-06-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
+  <url><loc>https://preditorium.com/blog/</loc><lastmod>2026-06-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://preditorium.com/blog/how-a-13-year-old-wrote-a-fantasy-novel.html</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://preditorium.com/blog/is-the-preditorium-prophecy-right-for-your-reader.html</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://preditorium.com/sample-chapter.pdf</loc><lastmod>2026-06-22</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://preditorium.com/preditorium-activity-pack.pdf</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>
