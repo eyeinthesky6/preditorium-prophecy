@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -140,12 +140,60 @@
     footer{padding:34px 18px 60px; text-align:center; color:#9aa4a5; font-size:13px}
     footer a{color:var(--gold); text-decoration:none}
     @media (prefers-reduced-motion: reduce){ *{transition:none!important} html{scroll-behavior:auto} }
+    /* ---- site-aligned nav (matches homepage) ---- */
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:rgba(7,23,27,.9);border-bottom:1px solid rgba(255,200,87,.18)}
+    .nav-inner{width:min(1160px,100%);margin:0 auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .nav .brand{font-family:"Cinzel",serif;font-weight:900;font-size:16px;color:var(--gold);text-decoration:none;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+    .nav-links{display:flex;gap:22px;align-items:center;font-family:"Inter",Arial,sans-serif}
+    .nav-links a{color:#e9e3d2;text-decoration:none;font-size:14px;font-weight:500}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links a.nav-cta{background:var(--gold);color:var(--night);padding:9px 18px;border-radius:999px;font-weight:700}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;width:44px;height:40px;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(255,200,87,.3);border-radius:10px;cursor:pointer}
+    .nav-toggle span{width:20px;height:2px;background:var(--gold);border-radius:2px}
+    @media(max-width:860px){
+      .nav-toggle{display:inline-flex}
+      .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(7,23,27,.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,200,87,.18);padding:0 18px;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease}
+      .nav-links.open{max-height:82vh;padding:6px 18px 18px}
+      .nav-links a{padding:14px 6px;font-size:16px;border-bottom:1px solid rgba(255,255,255,.07)}
+      .nav-links a.nav-cta{margin-top:12px;text-align:center}
+    }
+    /* reading controls bar under the nav */
+    .readerbar{background:rgba(7,23,27,.7);border-bottom:1px solid rgba(255,200,87,.12)}
+    .readerbar-in{width:min(980px,100%);margin:0 auto;padding:8px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .rb-label{font-family:"Cinzel",serif;color:var(--gold);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+    /* ---- banner hero (uses citadel art, not the cover) ---- */
+    .hero{position:relative;text-align:center;color:#fff;padding:74px 18px 44px;background:
+      radial-gradient(900px 420px at 75% 8%, rgba(255,200,87,.16), transparent 60%),
+      linear-gradient(180deg, rgba(7,23,27,.66), rgba(7,23,27,.92)),
+      url("images/citadel.jpg") center/cover no-repeat, var(--night)}
+    /* ---- site-aligned footer with social icons ---- */
+    .site-footer{background:#050f12;color:#9aa4a5;padding:36px 18px 56px;text-align:center;font-size:13px;border-top:1px solid rgba(255,200,87,.16)}
+    .site-footer a{color:var(--gold);text-decoration:none}
+    .social-row{display:flex;gap:14px;justify-content:center;margin:0 0 20px}
+    .sicon{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,200,87,.3);color:var(--gold);transition:background .2s,color .2s}
+    .sicon svg{width:20px;height:20px;fill:currentColor}
+    .sicon:hover{background:var(--gold);color:var(--night)}
+    .foot-links{margin:0 0 10px} .foot-copy{color:#7e8a8b;margin:0}
   </style>
 </head>
 <body class="">
-  <header class="bar">
-    <div class="bar-in">
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
       <a class="brand" href="/">Preditorium&nbsp;Prophecy</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="navLinks">
+        <a href="/#book">The Story</a>
+        <a href="/read-chapter-1.html">Read a Sample</a>
+        <a href="/#author">The Author</a>
+        <a href="/#reviews">Reviews</a>
+        <a href="/blog/">Blog</a>
+        <a class="nav-cta" href="/#buy">Buy Now</a>
+      </div>
+    </div>
+  </nav>
+  <div class="readerbar">
+    <div class="readerbar-in">
+      <span class="rb-label">Chapter One &middot; Free</span>
       <div class="tools" aria-label="Reading controls">
         <button class="tbtn tiny" type="button" data-size="s" aria-label="Smaller text">A</button>
         <button class="tbtn" type="button" data-size="m" aria-label="Normal text">A</button>
@@ -154,18 +202,18 @@
       </div>
     </div>
     <div class="progress" aria-hidden="true"><span id="bar"></span></div>
-  </header>
+  </div>
 
   <main>
-    <section class="hero wrap">
-      <p class="eyebrow">Chapter One · Free</p>
-      <img src="images/cover_front.jpg" width="700" height="1120" alt="The Preditorium Prophecy: The Golden Statue book cover" />
-      <h1>The Preditorium Prophecy</h1>
-      <p class="sub">The Golden Statue</p>
-      <p class="lead">Six friends. Strange powers. One prophecy. Start the adventure free — no signup, no download.</p>
-      <div class="cta-row">
-        <a class="btn" href="#read">Start reading ↓</a>
-        <button class="btn ghost share-go" type="button">Share Chapter 1</button>
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Chapter One · Free</p>
+        <h1>The Preditorium Prophecy</h1>
+        <p class="sub">The Golden Statue</p>
+        <p class="lead">Six friends. Strange powers. One prophecy. Start the adventure free — no signup, no download.</p>
+        <div class="cta-row">
+          <a class="btn" href="#read">Start reading ↓</a>
+        </div>
       </div>
     </section>
 
