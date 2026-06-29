@@ -30,7 +30,7 @@
     .nav-links a.nav-cta{background:var(--gold);color:var(--night);padding:9px 18px;border-radius:999px;font-weight:700}
     .nav-toggle{display:none;flex-direction:column;gap:5px;width:44px;height:40px;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(255,200,87,.3);border-radius:10px;cursor:pointer}
     .nav-toggle span{width:20px;height:2px;background:var(--gold);border-radius:2px}
-    @media(max-width:860px){.nav-toggle{display:inline-flex}.nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(7,23,27,.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,200,87,.18);padding:0 18px;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease}.nav-links.open{max-height:82vh;padding:6px 18px 18px}.nav-links a{padding:14px 6px;font-size:16px;border-bottom:1px solid rgba(255,255,255,.07)}.nav-links a.nav-cta{margin-top:12px;text-align:center}}
+    @media(max-width:920px){.nav-toggle{display:inline-flex}.nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(7,23,27,.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,200,87,.18);padding:0 18px;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease}.nav-links.open{max-height:82vh;padding:6px 18px 18px}.nav-links a{padding:14px 6px;font-size:16px;border-bottom:1px solid rgba(255,255,255,.07)}.nav-links a.nav-cta{margin-top:12px;text-align:center}}
     .wrap{max-width:760px;margin:0 auto;padding:48px 22px 72px}
     .eyebrow{color:var(--accent);font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 10px}
     h1{font-family:Georgia,serif;font-size:clamp(28px,5vw,40px);line-height:1.12;margin:0 0 12px;color:var(--ink)}
@@ -50,6 +50,9 @@
     .card h2{margin:0 0 8px;font-size:21px}
     .card p{color:var(--muted);margin:0}
     .card .rd{color:var(--accent);font-weight:700;font-size:14px;margin-top:10px;display:inline-block}
+    .post-nav{max-width:760px;margin:-40px auto 56px;padding:0 22px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+    .post-nav a{display:inline-flex;align-items:center;min-height:42px;padding:10px 16px;border:1px solid var(--line);border-radius:999px;background:var(--paper-2);color:var(--accent);font-weight:700;text-decoration:none}
+    .post-nav a:hover{border-color:var(--gold-deep);color:var(--ink)}
     .footer{background:#050f12;color:#9aa4a5;text-align:center;padding:26px 24px;font-size:13px}
     .footer a{color:var(--gold);text-decoration:none}
   </style>
@@ -61,7 +64,7 @@
       <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
       <div class="nav-links" id="navLinks">
         <a href="/#book">The Story</a>
-        <a href="/read-chapter-1.html">Read a Sample</a>
+        <a href="/read-chapter-1.html">Begin Reading</a>
         <a href="/#author">The Author</a>
         <a href="/#reviews">Reviews</a>
         <a href="/#school">Schools</a>
@@ -95,11 +98,14 @@
       <h3>Start the adventure</h3>
       <p>The Preditorium Prophecy: The Golden Statue &mdash; a middle-grade fantasy adventure for ages 8+.</p>
       <a class="btn" href="../index.html#buy">Get the book</a>
-      <a class="btn" href="../sample-chapter.pdf" target="_blank" rel="noopener" style="background:transparent;color:var(--gold)!important;border:1px solid var(--gold)">Read Chapter 1 free</a>
+      <a class="btn" href="../read-chapter-1.html" style="background:transparent;color:var(--gold)!important;border:1px solid var(--gold)">Begin Reading</a>
     </div>
   </article>
+  <nav class="post-nav" aria-label="Blog navigation">
+    <a href="/blog/">&larr; All posts</a>
+    <a href="/blog/is-the-preditorium-prophecy-right-for-your-reader.html">Next: Parent's Guide &rarr;</a>
+  </nav>
   <footer class="footer">
-    <a href="/blog/">Blog</a> &middot; <a href="/preditorium-activity-pack.pdf" target="_blank" rel="noopener">Free activity pack</a> &middot; <a href="/read-chapter-1.html">Read Chapter 1 free</a><br><br>
     &copy; 2026 Praanav J Thaakur &middot; The Preditorium Prophecy: The Golden Statue &middot; Contact: <a href="mailto:thakur.jai@gmail.com">thakur.jai@gmail.com</a>
   </footer>
   <script>

@@ -10,7 +10,7 @@ This is a plain static site:
 
 - `index.html` is the main page.
 - `images/` contains the book cover, author image, favicon and app icons.
-- `sample-chapter.pdf` is the free chapter sample.
+- `read-chapter-1.html` is the hosted Chapter One reader.
 - `robots.txt`, `sitemap.xml`, `llms.txt` and `site.webmanifest` support SEO, AEO and install metadata.
 
 ## Deploy
