@@ -424,10 +424,22 @@
     .review-card h3 { font-size: 18px; margin: 12px 0 10px; }
     .review-card p { margin: 0 0 14px; color: var(--muted); font-size: 16px; }
     .review-card .by { font-weight: 600; font-size: 14px; color: var(--ink); font-family: "Inter", sans-serif; }
-    @media (max-width: 720px) { .review-grid { grid-template-columns: 1fr; } }
+    .review-links { margin: 26px auto 0; max-width: 780px; text-align: center; background: var(--paper);
+      border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; box-shadow: 0 8px 24px rgba(23,59,63,0.06); }
+    .review-links p { margin: 0 0 14px; color: var(--muted); font-size: 15px; }
+    .review-link-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .review-link-row a { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 9px 16px;
+      border-radius: 999px; background: var(--gold); color: var(--night); border: 1px solid var(--gold); font-weight: 700;
+      font-size: 14px; text-decoration: none; transition: transform 0.15s ease, background 0.2s ease; }
+    .review-link-row a:hover { background: #ffd479; transform: translateY(-1px); }
+    @media (max-width: 720px) {
+      .review-grid { grid-template-columns: 1fr; }
+      .review-link-row a { flex: 1 1 160px; }
+    }
     @media (max-width: 520px) {
       .review-grid { gap: 18px; margin-top: 28px; }
       .review-card { padding: 22px 20px; border-radius: 12px; }
+      .review-links { padding: 20px 18px; }
     }
 
     /* ---------- AUTHOR PROFILES ---------- */
@@ -572,9 +584,14 @@
     /* ---------- FAQ ---------- */
     .faq { background: var(--paper-2); border-top: 1px solid var(--line); }
     .faq-list { margin-top: 34px; display: grid; gap: 14px; }
-    .faq-item { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; }
-    .faq-item h3 { font-family: "Cinzel", serif; font-size: 18px; margin: 0 0 8px; color: var(--ink); }
-    .faq-item p { margin: 0; color: var(--muted); font-size: 16px; }
+    .faq-item { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+    .faq-item summary { list-style: none; cursor: pointer; font-family: "Cinzel", serif; font-weight: 700; font-size: 18px;
+      color: var(--ink); padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: "+"; flex: 0 0 auto; width: 28px; height: 28px; border-radius: 999px;
+      display: grid; place-items: center; background: rgba(255,200,87,0.2); color: var(--accent); font-family: "Inter", sans-serif; }
+    .faq-item[open] summary::after { content: "-"; }
+    .faq-item p { margin: 0; padding: 0 24px 20px; color: var(--muted); font-size: 16px; }
     .faq-item a { color: var(--accent); font-weight: 600; text-decoration: none; }
     .faq-item a:hover { text-decoration: underline; }
 
@@ -757,6 +774,14 @@
             <h3>Great book</h3>
             <p>“Very well written and has a tight plot, with a gripping storyline. I enjoyed reading it — it's a must buy! Kept me engaged the entire time.”</p>
             <div class="by">— Komal Puri, verified purchase</div>
+          </div>
+        </div>
+        <div class="review-links reveal" aria-label="Leave an honest review">
+          <p>If you have read the book, an honest review helps other readers decide whether the adventure is right for them.</p>
+          <div class="review-link-row">
+            <a href="https://www.amazon.in/review/create-review?asin=B0H461JZXX" target="_blank" rel="noopener">Review on Amazon</a>
+            <a href="https://www.flipkart.com/the-preditorium-prophecy/product-reviews/itm42821d353088b?pid=9798904518042" target="_blank" rel="noopener">Review on Flipkart</a>
+            <a href="https://notionpress.com/in/read/the-preditorium-prophecy/#customer-reviews" target="_blank" rel="noopener">Review on Notion Press</a>
           </div>
         </div>
       </div>
@@ -948,7 +973,7 @@
           <p class="lead">The angle is simple: a young Indian author built a fantasy universe and wants to inspire more children to read and write.</p>
           <ul class="ticks">
             <li>High-resolution book cover and author details</li>
-            <li>Sample chapter and book blurb ready to share</li>
+            <li>Chapter One link and book blurb ready to share</li>
             <li>Q&amp;A and school-session information available</li>
             <li>Media enquiries welcome via the contact below</li>
           </ul>
@@ -962,13 +987,13 @@
         <p class="section-eyebrow">Questions</p>
         <h2>Frequently asked questions</h2>
         <div class="faq-list">
-          <div class="faq-item reveal"><h3>What is The Preditorium Prophecy: The Golden Statue about?</h3><p>It&rsquo;s a middle-grade fantasy adventure. Six friends &mdash; the Ascendants &mdash; discover strange powers and follow a prophecy beneath the Preditorium, through hidden tunnels and magical traps, toward the secrets of Atlantis and the legendary Golden Statue.</p></div>
-          <div class="faq-item reveal"><h3>What age group is the book for?</h3><p>It&rsquo;s written for readers aged 8 and up &mdash; a great fit for middle-grade and early-teen fantasy fans (roughly ages 8&ndash;14) and anyone who loves a fast, imaginative adventure.</p></div>
-          <div class="faq-item reveal"><h3>Is it similar to Percy Jackson or Harry Potter?</h3><p>If you enjoy the secret-world, found-family and mythical-quest feeling of series like Percy Jackson, Harry Potter or Keeper of the Lost Cities, The Preditorium Prophecy hits those notes &mdash; kids with unusual powers, a hidden world, and a race against darkness.</p></div>
-          <div class="faq-item reveal"><h3>Who is the author, Praanav J Thaakur?</h3><p>Praanav J Thaakur is a 13-year-old Indian author. The Preditorium Prophecy is his debut novel, written to show other young people that a big idea &mdash; plus the discipline to finish it &mdash; can become a real published book.</p></div>
-          <div class="faq-item reveal"><h3>Where can I buy The Preditorium Prophecy?</h3><p>In paperback and hardcover on <a href="https://www.amazon.in/dp/B0H461JZXX" target="_blank" rel="noopener">Amazon India</a>, <a href="https://www.flipkart.com/the-preditorium-prophecy/p/itm42821d353088b" target="_blank" rel="noopener">Flipkart</a> and direct from <a href="https://notionpress.com/in/read/the-preditorium-prophecy/" target="_blank" rel="noopener">Notion Press</a>, with international orders via Amazon. See <a href="#buy">Get your copy</a>.</p></div>
-          <div class="faq-item reveal"><h3>Is there an ebook or Kindle edition?</h3><p>The book is currently available in paperback and hardcover. An ebook edition is in the works &mdash; <a href="#connect">follow on social</a> to hear when it goes live.</p></div>
-          <div class="faq-item reveal"><h3>Can I begin the story before buying?</h3><p>Yes &mdash; you can <a href="read-chapter-1.html">begin Chapter One</a> in a mobile-friendly reader. The full book runs 21 chapters and 183 pages.</p></div>
+          <details class="faq-item reveal"><summary>What is The Preditorium Prophecy: The Golden Statue about?</summary><p>It&rsquo;s a middle-grade fantasy adventure. Six friends &mdash; the Ascendants &mdash; discover strange powers and follow a prophecy beneath the Preditorium, through hidden tunnels and magical traps, toward the secrets of Atlantis and the legendary Golden Statue.</p></details>
+          <details class="faq-item reveal"><summary>What age group is the book for?</summary><p>It&rsquo;s written for readers aged 8 and up &mdash; a great fit for middle-grade and early-teen fantasy fans (roughly ages 8&ndash;14) and anyone who loves a fast, imaginative adventure.</p></details>
+          <details class="faq-item reveal"><summary>Is it similar to Percy Jackson or Harry Potter?</summary><p>If you enjoy the secret-world, found-family and mythical-quest feeling of series like Percy Jackson, Harry Potter or Keeper of the Lost Cities, The Preditorium Prophecy hits those notes &mdash; kids with unusual powers, a hidden world, and a race against darkness.</p></details>
+          <details class="faq-item reveal"><summary>Who is the author, Praanav J Thaakur?</summary><p>Praanav J Thaakur is a 13-year-old Indian author. The Preditorium Prophecy is his debut novel, written to show other young people that a big idea &mdash; plus the discipline to finish it &mdash; can become a real published book.</p></details>
+          <details class="faq-item reveal"><summary>Where can I buy The Preditorium Prophecy?</summary><p>In paperback and hardcover on <a href="https://www.amazon.in/dp/B0H461JZXX" target="_blank" rel="noopener">Amazon India</a>, <a href="https://www.flipkart.com/the-preditorium-prophecy/p/itm42821d353088b" target="_blank" rel="noopener">Flipkart</a> and direct from <a href="https://notionpress.com/in/read/the-preditorium-prophecy/" target="_blank" rel="noopener">Notion Press</a>, with international orders via Amazon. See <a href="#buy">Get your copy</a>.</p></details>
+          <details class="faq-item reveal"><summary>Is there an ebook or Kindle edition?</summary><p>The book is currently available in paperback and hardcover. An ebook edition is in the works &mdash; <a href="#connect">follow on social</a> to hear when it goes live.</p></details>
+          <details class="faq-item reveal"><summary>Can I begin the story before buying?</summary><p>Yes &mdash; you can <a href="read-chapter-1.html">begin Chapter One</a> in a mobile-friendly reader. The full book runs 21 chapters and 183 pages.</p></details>
         </div>
       </div>
     </section>
