@@ -186,7 +186,9 @@
         <a href="/read-chapter-1.html">Read a Sample</a>
         <a href="/#author">The Author</a>
         <a href="/#reviews">Reviews</a>
+        <a href="/#school">Schools</a>
         <a href="/blog/">Blog</a>
+        <a href="/#contact">Contact</a>
         <a class="nav-cta" href="/#buy">Buy Now</a>
       </div>
     </div>
@@ -342,12 +344,24 @@
   </main>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <footer>
-    Free sample of <a href="/">The Preditorium Prophecy: The Golden Statue</a> by Praanav J Thaakur ·
-    <a href="/blog/">Blog</a> · <a href="mailto:thakur.jai@gmail.com">Contact</a>
+  <footer class="site-footer">
+    <p class="foot-links"><a href="/blog/">Blog</a> &middot; <a href="/preditorium-activity-pack.pdf" target="_blank" rel="noopener">Free activity pack</a> &middot; <a href="/read-chapter-1.html">Read Chapter 1 free</a></p>
+    <p class="foot-copy">&copy; 2026 Praanav J Thaakur &middot; The Preditorium Prophecy: The Golden Statue &middot; Contact: <a href="mailto:thakur.jai@gmail.com">thakur.jai@gmail.com</a></p>
   </footer>
 
   <script>
+    (function(){
+      var t=document.getElementById('navToggle'), m=document.getElementById('navLinks');
+      if(!t||!m) return;
+      function close(){ m.classList.remove('open'); t.setAttribute('aria-expanded','false'); t.setAttribute('aria-label','Open menu'); }
+      t.addEventListener('click', function(){
+        var open=m.classList.toggle('open');
+        t.setAttribute('aria-expanded', open?'true':'false');
+        t.setAttribute('aria-label', open?'Close menu':'Open menu');
+      });
+      m.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+    })();
+
     var URL = "https://preditorium.com/read-chapter-1.html";
     var body = document.body;
     try{ var ss=localStorage.getItem('ppReaderSize'); if(ss) body.classList.add(ss);
